@@ -1,0 +1,38 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+
+  &.shown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &,
+  &-bg {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &-bg {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-body {
+    z-index: 4;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: $b-radius;
+    max-width: 1200px;
+    width: calc(100% - 20px);
+  }
+
+  h1 {
+    text-align: center;
+  }
+}

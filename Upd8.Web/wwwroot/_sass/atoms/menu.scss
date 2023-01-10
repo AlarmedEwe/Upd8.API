@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  .logo {
+    height: 5rem;
+  }
+
+  a {
+    display: block;
+    color: #1e3868;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

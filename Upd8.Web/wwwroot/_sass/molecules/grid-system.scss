@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 1em;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &-3 {
+    width: calc(100% / 3);
+  }
+  &-4 {
+    width: 25%;
+  }
+}

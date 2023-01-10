@@ -1,0 +1,23 @@
+@import "../atoms/menu";
+
+.container {
+  max-width: 1200px;
+  width: calc(100% - 20px);
+  margin: 8px auto 0;
+}
+
+.bordered {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: $b-radius;
+
+  h1 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #1e3868;
+  }
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}

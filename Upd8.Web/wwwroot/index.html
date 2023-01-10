@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPD8 | Cadastro Cliente</title>
+    <link rel="stylesheet" href="_css/style.css" />
+</head>
+<body>
+    <div class="container bordered">
+        <nav class="menu">
+            <a href="#">
+                <img src="_img/Logo.png" alt=":upd8" class="logo" />
+            </a>
+            <a href="lista/index.html">Lista de clientes</a>
+        </nav>
+
+        <form action="#" id="formCreate" class="form bordered">
+            <h1>Cadastro Cliente</h1>
+
+            <div class="row">
+                <div class="col col-4">
+                    <label for="cpf">CPF:</label>
+                    <input class="input" type="text" id="cpf" placeholder="378.846.758-55" />
+                </div>
+                <div class="col col-4">
+                    <label for="name">Nome:</label>
+                    <input class="input" type="text" id="name" />
+                </div>
+                <div class="col col-4">
+                    <label for="birthday">Data Nascimento:</label>
+                    <input class="input" type="date" id="birthday" />
+                </div>
+                <div class="col col-4">
+                    Sexo:
+
+                    <input type="radio" name="gender" id="genderM" value="M" checked />
+                    <label for="genderM">Masculino</label>
+
+                    <input type="radio" name="gender" id="genderF" value="F" />
+                    <label for="genderF">Feminino</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-3">
+                    <label for="address">Endereço:</label>
+                    <input class="input" type="text" id="address" />
+                </div>
+                <div class="col col-3">
+                    <label for="state">Estado:</label>
+                    <select class="input stateList" id="state">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div class="col col-3">
+                    <label for="city">Cidade:</label>
+                    <input type="text" id="city" class="input">
+                </div>
+            </div>
+
+            <div class="align-right">
+                <button id="save" type="submit" class="btn btn-primary">
+                    Salvar
+                </button>
+                <button id="clean" type="reset" class="btn btn-secondary">
+                    Limpar
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <!-- jQuery Mask -->
+    <script src="../_plugins/jQuery-Mask/v1.14.16/jquery.mask.js"></script>
+    <!-- Custom JS -->
+    <script src="_plugins/states/v1.0.0/states.js"></script>
+    <script src="_plugins/states/v1.0.0/loadStates.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

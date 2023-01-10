@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPD8 | Consulta Cliente</title>
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="../_css/style.css" />
+</head>
+<body>
+    <div class="container bordered">
+        <nav class="menu">
+            <a href="../index.html">
+                <img src="/_img/Logo.png" alt=":upd8" class="logo" />
+            </a>
+            <a href="/">Lista de clientes</a>
+        </nav>
+
+        <div class="bordered">
+            <h1>Lista de clientes</h1>
+
+            <table id="listTable" class="table">
+                <thead>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>Cliente</th>
+                <th>CPF</th>
+                <th>Data Nasc.</th>
+                <th>Estado</th>
+                <th>Cidade</th>
+                <th>Sexo</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal" id="modalEdit">
+        <div class="modal-bg" onclick="closeModal()"></div>
+
+        <div class="modal-body">
+            <h1>Editar cliente</h1>
+            <form action="#" id="formEdit" class="form bordered">
+                <input type="hidden" name="idEdit" id="idEdit">
+
+                <div class="row">
+                    <div class="col col-4">
+                        <label for="cpfEdit">CPF:</label>
+                        <input class="input cpf"
+                               type="text"
+                               id="cpfEdit"
+                               placeholder="378.846.758-55" />
+                    </div>
+                    <div class="col col-4">
+                        <label for="nameEdit">Nome:</label>
+                        <input class="input" type="text" id="nameEdit" />
+                    </div>
+                    <div class="col col-4">
+                        <label for="birthdayEdit">Data Nascimento:</label>
+                        <input class="input" type="date" id="birthdayEdit" />
+                    </div>
+                    <div class="col col-4">
+                        Sexo:
+
+                        <input type="radio"
+                               name="genderEdit"
+                               id="genderMEdit"
+                               value="M"
+                               checked />
+                        <label for="genderMEdit">Masculino</label>
+
+                        <input type="radio"
+                               name="genderEdit"
+                               id="genderFEdit"
+                               value="F" />
+                        <label for="genderFEdit">Feminino</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-3">
+                        <label for="addressEdit">Endereço:</label>
+                        <input class="input" type="text" id="addressEdit" />
+                    </div>
+                    <div class="col col-3">
+                        <label for="stateEdit">Estado:</label>
+                        <select class="input stateList" id="stateEdit">
+                            <option value="" disabled selected>Selecione</option>
+                        </select>
+                    </div>
+                    <div class="col col-3">
+                        <label for="cityEdit">Cidade:</label>
+                        <input type="text" id="cityEdit" class="input" />
+                    </div>
+                </div>
+
+                <div class="align-right">
+                    <button id="saveEdit" type="submit" class="btn btn-primary">
+                        Salvar
+                    </button>
+                    <button id="cleanEdit" type="reset" class="btn btn-secondary">
+                        Limpar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modalDelete">
+        <div class="modal-bg" onclick="closeModal()"></div>
+
+        <div class="modal-body" style="max-width: 500px">
+            <h1>Tem certeza?</h1>
+            <p>
+                Gostaria mesmo de remover o cliente
+                <span id="deleteName">{customer.name}</span>?
+            </p>
+
+            <div class="align-right">
+                <button class="btn btn-secondary" onclick="closeModal()">
+                    <i class="fa fa-fw fa-xmark"></i>
+                    Não, cancelar
+                </button>
+                <button class="btn btn-danger" id="deleteButton">
+                    <i class="fa fa-fw fa-trash"></i>
+                    Sim, excluir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <!-- jQuery Mask -->
+    <script src="../_plugins/jQuery-Mask/v1.14.16/jquery.mask.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="../_plugins/dataTable/pt-br/v1.12.1/pt-br.js"></script>
+    <!-- Custom JS -->
+    <script src="../_plugins/states/v1.0.0/states.js"></script>
+    <script src="../_plugins/states/v1.0.0/loadStates.js"></script>
+    <script src="./list.js"></script>
+</body>
+</html>

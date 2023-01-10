@@ -1,0 +1,42 @@
+.btn {
+  padding: 8px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $primary;
+    color: $primary-text;
+
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    color: $secondary-text;
+
+    &:hover {
+      background-color: $secondary-dark;
+    }
+  }
+
+  &-success {
+    background-color: $success;
+    color: $success-text;
+
+    &:hover {
+      background-color: $success-dark;
+    }
+  }
+
+  &-danger {
+    background-color: $danger;
+    color: $danger-text;
+
+    &:hover {
+      background-color: $danger-dark;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+p {
+  margin-bottom: 1em;
+}
+
+.btn {
+  padding: 8px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: #1565c0;
+  color: #eee;
+}
+.btn-primary:hover {
+  background-color: #0f4a8c;
+}
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #111;
+}
+.btn-secondary:hover {
+  background-color: #adadad;
+}
+.btn-success {
+  background-color: #2e7d32;
+  color: #eee;
+}
+.btn-success:hover {
+  background-color: #1b4a1e;
+}
+.btn-danger {
+  background-color: #b71c1c;
+  color: #eee;
+}
+.btn-danger:hover {
+  background-color: #851414;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 1em;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.col-3 {
+  width: 33.3333333333%;
+}
+.col-4 {
+  width: 25%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.menu .logo {
+  height: 5rem;
+}
+.menu a {
+  display: block;
+  color: #1e3868;
+  cursor: pointer;
+}
+.menu a:hover {
+  color: #1565c0;
+}
+
+.container {
+  max-width: 1200px;
+  width: calc(100% - 20px);
+  margin: 8px auto 0;
+}
+
+.bordered {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.bordered h1 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #1e3868;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+}
+.modal.shown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal, .modal-bg {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.modal-bg {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-body {
+  z-index: 4;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  max-width: 1200px;
+  width: calc(100% - 20px);
+}
+.modal h1 {
+  text-align: center;
+}
+
+.input {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/*# sourceMappingURL=style.css.map */

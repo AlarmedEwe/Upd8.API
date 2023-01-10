@@ -1,0 +1,19 @@
+@import "config/global";
+
+@import "atoms/buttons";
+
+@import "molecules/grid-system";
+@import "molecules/containers";
+@import "molecules/modal";
+
+.input {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: $b-radius;
+}
+
+.align {
+  &-right {
+    text-align: right;
+  }
+}
